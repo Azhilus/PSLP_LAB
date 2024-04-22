@@ -1,0 +1,11 @@
+X = -2:2;
+y = 1:5;
+A = zeros(length(X), length(y));  // Initialize A matrix with zeros
+
+for i = 1:length(X)
+    for j = 1:length(y)
+        A(i, j) = X(i) * y(j);
+    end
+end
+
+disp(A);
