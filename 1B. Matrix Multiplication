@@ -1,0 +1,11 @@
+A = [8 6 4; 12 5 9; 10 8 13];
+B = [1 2 10; 6 7 9; 12 3 4];
+[m, n] = size(A);
+[p, q] = size(B);
+
+if (n ~= p)
+    disp("Invalid matrices to multiply");
+else
+    C = A * B;
+    disp(C);
+end
