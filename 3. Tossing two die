@@ -1,0 +1,19 @@
+N = 2000;
+count = 0;
+prob1 = zeros(1, N);  // Initialize probability array
+
+for i = 1:N
+    y1 = ceil(rand(1) * 6);  // Roll first die
+    y2 = ceil(rand(1) * 6);  // Roll second die
+    
+    if (y1 + y2 == 7)  // Check if sum is 7
+        count = count + 1;
+    end
+    
+    prob1(i) = count / i;  // Calculate probability
+end
+
+plot(prob1);
+xlabel("Number of trials");
+ylabel("Probability");
+title("Probability of getting sum of dots on faces of two dice to be 7");
